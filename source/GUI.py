@@ -15,6 +15,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('Proyecto Kiekert')
         self.setGeometry(300, 100, 600, 400)
 
+        ## MAIN WIDGET
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         self.layout = QVBoxLayout(self.central_widget)
