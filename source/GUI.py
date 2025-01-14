@@ -1,6 +1,6 @@
 ## IMPORT STATEMENTS
 from PySide6.QtWidgets import (
-    QApplication, QMainWindow, QVBoxLayout, QWidget, QPushButton, QFileDialog, QLabel
+    QApplication, QMainWindow, QVBoxLayout, QWidget, QPushButton, QFileDialog, QLabel, QFormLayout, QComboBox
 )
 from PySide6.QtCore import Qt
 import fase1
@@ -19,6 +19,15 @@ class MainWindow(QMainWindow):
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         self.layout = QVBoxLayout(self.central_widget)
+
+
+        ## LOADING THE EXCEL FILE
+        self.label_file = QLabel('Step 1: Select Excel File')
+        self.label_file.setAlignment(Qt.AlignCenter)
+        self.layout.addWidget(self.label_sheets)
+
+        self.form_layout = QFormLayout()
+        self.sheet_dropdown_fase1 = QComboBox()
 
 
 if __name__ == '__main__':
